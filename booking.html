@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now - Jeff Gilbert Home Maintenance</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="container">
+            <div class="logo-section">
+                <img src="../images/logo.jpg" alt="Jeff Gilbert Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>Jeff Gilbert</h1>
+                    <p>YOUR LOCAL HOME MAINTENANCE PROFESSIONAL</p>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle">☰</button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./booking.html">Book Now</a></li>
+                <li><a href="./portal.html" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Booking Header -->
+    <section class="hero" style="padding: 3rem 0;">
+        <div class="container">
+            <h2>Schedule Your Service</h2>
+            <p>Fill out the form below and we'll get back to you within 24 hours</p>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-section">
+        <div class="container">
+            <form class="booking-form" onsubmit="handleBookingSubmit(event)">
+                <h2 style="color: var(--primary-navy); margin-bottom: 2rem; text-align: center;">Request an Appointment</h2>
+                
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Service Needed *</label>
+                    <select id="service" name="service" required>
+                        <option value="">-- Select a Service --</option>
+                        <option value="power-washing">Power Washing</option>
+                        <option value="home-maintenance">Home Maintenance</option>
+                        <option value="general-repairs">General Repairs</option>
+                        <option value="carpentry">Carpentry Services</option>
+                        <option value="painting">Painting Services</option>
+                        <option value="seasonal">Seasonal Services</option>
+                        <option value="other">Other / Multiple Services</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Preferred Date *</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Preferred Time *</label>
+                    <select id="time" name="time" required>
+                        <option value="">-- Select a Time --</option>
+                        <option value="8am-10am">8:00 AM - 10:00 AM</option>
+                        <option value="10am-12pm">10:00 AM - 12:00 PM</option>
+                        <option value="12pm-2pm">12:00 PM - 2:00 PM</option>
+                        <option value="2pm-4pm">2:00 PM - 4:00 PM</option>
+                        <option value="4pm-6pm">4:00 PM - 6:00 PM</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Project Details *</label>
+                    <textarea id="message" name="message" required placeholder="Please describe the work you need done, including any specific details or concerns..."></textarea>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Submit Booking Request</button>
+
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--dark-gray); font-size: 0.9rem;">
+                    * All fields are required. We'll contact you within 24 hours to confirm your appointment.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="about-content" style="background-color: var(--light-bg);">
+        <div class="container">
+            <h2 class="section-title">Other Ways to Reach Us</h2>
+            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div class="service-card">
+                    <div class="service-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p><strong>(555) 123-4567</strong></p>
+                    <p>Mon-Sat: 8:00 AM - 6:00 PM</p>
+                    <p>For urgent requests, please call directly</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✉️</div>
+                    <h3>Email Us</h3>
+                    <p><strong>info@jeffgilbert.com</strong></p>
+                    <p>We respond to all emails within 24 hours</p>
+                    <p>Include photos for faster estimates</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Service Area</h3>
+                    <p><strong>Local & Surrounding Areas</strong></p>
+                    <p>Serving the community with pride</p>
+                    <p>Contact us to confirm coverage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Expect -->
+    <section class="about-content">
+        <div class="container">
+            <h2 class="section-title">What to Expect</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">1️⃣</div>
+                    <h3>Submit Request</h3>
+                    <p>Fill out the booking form with your project details and preferred schedule.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">2️⃣</div>
+                    <h3>Confirmation Call</h3>
+                    <p>We'll contact you within 24 hours to confirm details and provide an estimate.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">3️⃣</div>
+                    <h3>Service Delivery</h3>
+                    <p>We arrive on time, complete the work professionally, and ensure your satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="reviews" style="background-color: var(--light-bg);">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <h4 style="color: var(--primary-navy); margin-bottom: 0.5rem;">Do you provide free estimates?</h4>
+                    <p>Yes! We provide free estimates for all services. After reviewing your request, we'll provide a detailed quote before any work begins.</p>
+                </div>
+                <div class="review-card">
+                    <h4 style="color: var(--primary-navy); margin-bottom: 0.5rem;">What payment methods do you accept?</h4>
+                    <p>We accept cash, checks, and all major credit cards. Payment is due upon completion of work unless other arrangements are made in advance.</p>
+                </div>
+                <div class="review-card">
+                    <h4 style="color: var(--primary-navy); margin-bottom: 0.5rem;">Are you licensed and insured?</h4>
+                    <p>Absolutely! We carry full liability insurance and all necessary licenses to protect you and your property.</p>
+                </div>
+                <div class="review-card">
+                    <h4 style="color: var(--primary-navy); margin-bottom: 0.5rem;">How far in advance should I book?</h4>
+                    <p>We recommend booking at least 1-2 weeks in advance, especially during busy seasons. However, we can often accommodate urgent requests.</p>
+                </div>
+                <div class="review-card">
+                    <h4 style="color: var(--primary-navy); margin-bottom: 0.5rem;">Do you offer emergency services?</h4>
+                    <p>For urgent repairs, please call us directly at (555) 123-4567. We'll do our best to accommodate emergency situations.</p>
+                </div>
+                <div class="review-card">
+                    <h4 style="color: var(--primary-navy); margin-bottom: 0.5rem;">What if I need to reschedule?</h4>
+                    <p>We understand plans change. Please give us at least 24 hours notice if you need to reschedule your appointment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jeff Gilbert</h3>
+                    <p>Your Local Home Maintenance Professional</p>
+                    <p>Serving the community with pride and excellence</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="../index.html">Home</a>
+                    <a href="./services.html">Services</a>
+                    <a href="./about.html">About</a>
+                    <a href="./booking.html">Book Now</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@jeffgilbert.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Hours: Mon-Sat, 8am-6pm</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Jeff Gilbert - Home Maintenance Professional. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
